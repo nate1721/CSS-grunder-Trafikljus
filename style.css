@@ -1,0 +1,56 @@
+.traffic-light {
+    margin: 0 auto;
+    background-color: white;
+    border: 0px solid white;
+    padding: 10px;
+    width: 130px;
+    
+}
+body{
+    background-color: lightgray;
+}
+.red {
+    background: linear-gradient(to bottom, red 0%, red 50%, rgb(222, 152, 152) 50%, rgb(222, 152, 152) 50% 100%);
+    width: 100px; height: 100px;
+    border: 15px solid darkred;
+    margin-bottom: 10px;
+    
+}
+
+.green {
+    background-color: green;
+    width: 100px; height: 100px;
+    border: 15px solid darkgreen;
+    position: relative;
+}
+
+.green::after {
+    content: "";
+    position: absolute;
+    width: 50%; 
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: lightgreen;
+}
+
+.yellow {
+    background-color: yellow;
+    width: 100px; height: 100px;
+    border: 15px solid rgb(204, 153, 0);
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+.yellow::after {
+    content: "";
+    position: absolute;
+    width: 50%; 
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 200);
+}
