@@ -1,56 +1,66 @@
 .traffic-light {
-    margin: 0 auto;
-    background-color: white;
-    border: 0px solid white;
-    padding: 10px;
-    width: 130px;
-    
-}
-body{
-    background-color: lightgray;
-}
-.red {
-    background: linear-gradient(to bottom, red 0%, red 50%, rgb(222, 152, 152) 50%, rgb(222, 152, 152) 50% 100%);
-    width: 100px; height: 100px;
-    border: 15px solid darkred;
-    margin-bottom: 10px;
-    
+  width: 100px;
+  height: 300px;
+  background-color: white;
+  border: 5px solid white;
+  margin: 0 auto;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
-.green {
-    background-color: green;
-    width: 100px; height: 100px;
-    border: 15px solid darkgreen;
-    position: relative;
+body {
+  background-color: grey;
 }
 
-.green::after {
-    content: "";
-    position: absolute;
-    width: 50%; 
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    background-color: lightgreen;
+.light.red {
+  background-color: red;
+  width: 80px;
+  height: 80px;
+  border: 10px solid darkred;
+  position: relative;
+}
+.light.yellow {
+  background-color: yellow;
+  width: 80px;
+  height: 80px;
+  border: 10px solid goldenrod;
+  position: relative;
+}
+.light.green {
+  background-color: green;
+  width: 80px;
+  height: 80px;
+  border: 10px solid darkgreen;
+  position: relative;
+}
+.light.red::after {
+  content: "";
+  width: 80px;
+  height: 50%;
+  background-color: lightcoral;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-.yellow {
-    background-color: yellow;
-    width: 100px; height: 100px;
-    border: 15px solid rgb(204, 153, 0);
-    margin-bottom: 10px;
-    position: relative;
-
+.light.yellow::after {
+  content: "";
+  width: 40px;
+  height: 50%;
+  background-color: lightyellow;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
-
-.yellow::after {
-    content: "";
-    position: absolute;
-    width: 50%; 
-    bottom: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(255, 255, 200);
+.light.green::after {
+  content: "";
+  width: 40px;
+  height: 50%;
+  background-color: lightgreen;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
